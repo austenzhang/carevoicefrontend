@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/Button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent } from "@/components/ui/Dialog";
 import { useNavigate } from "react-router-dom";
 
 export default function BatchGenerationForm({ isOpen, onClose, transcripts, patientId }) {
