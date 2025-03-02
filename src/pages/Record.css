@@ -1,0 +1,171 @@
+/* General styles */
+.record-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f8f8f8;
+}
+
+/* Form container */
+.record-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  text-align: center;
+}
+
+/* Label styles */
+.record-box label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  align-items: center;
+  text-align: left;
+}
+
+.recording-visualizer,
+.playback-waveform {
+  width: 230px;
+  height: 80px;
+  display: block;
+  margin: 10px auto 0; /* center horizontally */
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Dropdown */
+.record-box select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.record-box label.patient-label {
+  font-size: 25px; /* bigger than 16px so you can actually see a difference */
+}
+
+/* Consent Checkbox */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+/* Hide the default checkbox box/mark, but keep it accessible */
+.checkbox-container input[type="checkbox"] {
+  appearance: none;         /* Remove default checkbox styling */
+  -webkit-appearance: none; /* For Safari/older iOS */
+  width: 0;
+  height: 0;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* The pill-shaped track */
+.toggle-switch {
+  display: inline-block;
+  width: 38px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 9999px; /* full pill shape */
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* The round knob */
+.toggle-switch::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+/* When checked, move the knob right and change color */
+input[type="checkbox"]:checked + .toggle-switch {
+  background-color: #007bff;
+}
+
+input[type="checkbox"]:checked + .toggle-switch::after {
+  transform: translateX(18px);
+}
+
+/* The text label, if you want separate styling */
+.consent-text {
+  font-size: 10px;
+}
+
+/* Record Button */
+.record-button {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  border: none;
+  font-size: 55px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.record-button:hover {
+  background-color: #0056b3;
+  opacity: 0.9;
+}
+
+/* Recording active */
+.record-button.recording {
+  background-color: #ff4b5c;
+}
+
+/* Play Icon */
+.record-button::before {
+  content: "▶";
+  position: absolute;
+  top: 53%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  line-height: 1;   /* Ensures the icon doesn’t shift vertically */
+}
+
+/* When recording */
+.record-button.recording::before {
+  content: "■";
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1; 
+}
+
+/* Audio Player */
+.audio-player {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  width: 100%;
+}
