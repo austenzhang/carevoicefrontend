@@ -1,5 +1,5 @@
 import { useState, useEffect, useLayoutEffect, useRef } from "react";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/Input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useNavigate, Link } from "react-router-dom";
