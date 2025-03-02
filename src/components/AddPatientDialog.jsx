@@ -6,7 +6,7 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/Dialog";
+} from "@/components/ui/dialog";
 
 export default function AddPatientDialog({ onAdd, onCancel }) {
   const [name, setName] = useState("");
