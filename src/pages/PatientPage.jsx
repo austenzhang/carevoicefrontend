@@ -15,7 +15,7 @@ export default function PatientPage() {
   useEffect(() => {
     const fetchDocuments = async () => {
       try {
-        const response = await fetch(`/api/patient/${patientId}`);
+        const response = await fetch(`https://carevoicebackend-51a59399bb40.herokuapp.com/api/patient/${patientId}`);
         if (!response.ok) {
           throw new Error("Failed to fetch patient documents.");
         }

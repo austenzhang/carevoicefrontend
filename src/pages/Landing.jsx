@@ -12,7 +12,7 @@ export default function Landing() {
   useEffect(() => {
     const fetchPatients = async () => {
       try {
-        const response = await fetch("/api/patients/1");
+        const response = await fetch("https://carevoicebackend-51a59399bb40.herokuapp.com/api/patients/1");
         if (!response.ok) {
           throw new Error("Failed to fetch patients");
         }
