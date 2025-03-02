@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useNavigate, Link } from "react-router-dom";
-import { Label } from "@/components/ui/label";
+import { Label } from "@/components/ui/Label";
 
 import "./Record.css";
 
