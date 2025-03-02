@@ -1,5 +1,5 @@
 import { useState, useEffect, useLayoutEffect, useRef } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useNavigate, Link } from "react-router-dom";
@@ -241,10 +241,10 @@ function Record() {
           <div className="mt-2 text-4xl text-gray-700">Transcribing...</div>
         ) : (
           <div>
-            <button
+            <Button
               onClick={recording ? stopRecording : startRecording}
-              className={`h-[300px] w-[300px] record-button ${recording ? "recording" : ""}`}
-            ></button>
+              className={`h-[300px] w-[300px] record-Button ${recording ? "recording" : ""}`}
+            ></Button>
             {/* Audio playback and waveform */}
             {audioURL && (
               <>
