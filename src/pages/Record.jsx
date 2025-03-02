@@ -30,7 +30,7 @@ function Record() {
   useEffect(() => {
     const fetchPatients = async () => {
       try {
-        const response = await fetch("/api/patients/1");
+        const response = await fetch("https://carevoicebackend-51a59399bb40.herokuapp.com/api/patients/1");
         if (!response.ok) {
           throw new Error("Failed to fetch patients");
         }
@@ -162,7 +162,7 @@ function Record() {
       formData.append("file", audioFile);
       formData.append("patient", selectedPatient.name);
 
-      await fetch("http://localhost:8080/api/transcript/transcribe", {
+      await fetch("https://carevoicebackend-51a59399bb40.herokuapp.com/api/transcript/transcribe", {
         method: "POST",
         body: formData,
       });

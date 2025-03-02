@@ -33,7 +33,7 @@ export default function HeadToToea() {
   useEffect(() => {
     const fetchDocument = async () => {
       try {
-        const response = await fetch(`/api/head-to-toe/${head_to_toeId}`);
+        const response = await fetch(`https://carevoicebackend-51a59399bb40.herokuapp.com/api/head-to-toe/${head_to_toeId}`);
         if (!response.ok) {
           throw new Error("Failed to fetch document");
         }
@@ -56,7 +56,7 @@ export default function HeadToToea() {
 
   const handleSave = async () => {
     try {
-      const response = await fetch(`/api/head-to-toe/${head_to_toeId}`, {
+      const response = await fetch(`https://carevoicebackend-51a59399bb40.herokuapp.com/api/head-to-toe/${head_to_toeId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

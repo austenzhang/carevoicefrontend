@@ -19,7 +19,7 @@ export default function Transcript() {
   useEffect(() => {
     const fetchDocument = async () => {
       try {
-        const response = await fetch(`/api/transcript/${transcriptId}`);
+        const response = await fetch(`https://carevoicebackend-51a59399bb40.herokuapp.com/api/transcript/${transcriptId}`);
         if (!response.ok) {
           throw new Error("Failed to fetch document");
         }
@@ -40,7 +40,7 @@ export default function Transcript() {
 
   const handleSave = async () => {
     try {
-      const response = await fetch(`/api/transcript/${transcriptId}`, {
+      const response = await fetch(`https://carevoicebackend-51a59399bb40.herokuapp.com/api/transcript/${transcriptId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

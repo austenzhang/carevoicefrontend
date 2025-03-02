@@ -20,7 +20,7 @@ export default function DARP() {
     const fetchDocument = async () => {
       try {
         console.log(DARP_Id)
-        const response = await fetch(`/api/DARP/${DARP_Id}`);
+        const response = await fetch(`https://carevoicebackend-51a59399bb40.herokuapp.com/api/DARP/${DARP_Id}`);
         if (!response.ok) {
           throw new Error("Failed to fetch document");
         }
@@ -41,7 +41,7 @@ export default function DARP() {
 
   const handleSave = async () => {
     try {
-      const response = await fetch(`/api/DARP/${DARP_Id}`, {
+      const response = await fetch(`https://carevoicebackend-51a59399bb40.herokuapp.com/api/DARP/${DARP_Id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

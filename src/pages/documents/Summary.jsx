@@ -15,7 +15,7 @@ export default function Summary() {
   useEffect(() => {
     const fetchDocument = async () => {
       try {
-        const response = await fetch(`/api/summary/${summaryId}`);
+        const response = await fetch(`https://carevoicebackend-51a59399bb40.herokuapp.com/api/summary/${summaryId}`);
         if (!response.ok) {
           throw new Error("Failed to fetch document");
         }
@@ -36,7 +36,7 @@ export default function Summary() {
 
   const handleSave = async () => {
     try {
-      const response = await fetch(`/api/summary/{sumammaryId}`, {
+      const response = await fetch(`https://carevoicebackend-51a59399bb40.herokuapp.com/api/summary/{sumammaryId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
