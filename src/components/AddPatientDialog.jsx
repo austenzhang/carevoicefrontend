@@ -43,7 +43,7 @@ export default function AddPatientDialog({ onAdd, onCancel }) {
     } catch (error) {
       console.error("Error adding patient:", error);
     } finally {
-      // setLoading(false);
+      setLoading(false);
       // window.location.reload();
 
     }
