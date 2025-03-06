@@ -58,7 +58,7 @@ export default function Transcript() {
 
   const handleSummarize = async () => {
     setIsSummarizing(true);
-    let endpoint = "/sandbox-api/convert-to-summary";
+    let endpoint = "https://carevoicefrontendexpress-1b06bd543d5f.herokuapp.com/convert-to-summary";
 
     const payload = {
       transcript_ids: [transcriptId],
