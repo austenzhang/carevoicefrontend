@@ -15,7 +15,7 @@ export default defineConfig({
     },
   },
   server: {
-    proxy: {
+    //proxy: {
       // "/api": {
       //   target: "https://carevoicebackend-51a59399bb40.herokuapp.com/api/", // The target server
       //   changeOrigin: true, // Set this to true if you need to change the origin
@@ -26,6 +26,6 @@ export default defineConfig({
       //   changeOrigin: true, // Set this to true if you need to change the origin
       //   rewrite: (path) => path.replace(/^\/sandbox-api/, ""), // Remove the base path from the request URL
       // },
-    },
+    //},
   },
 });
