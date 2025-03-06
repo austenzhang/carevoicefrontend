@@ -243,11 +243,15 @@ function Record() {
           <div>
             <Button
               onClick={recording ? stopRecording : startRecording}
-              className="h-[300px] w-[300px] bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all duration-300 !important"
+              className={`h-[120px] w-[120px] flex items-center justify-center rounded-full 
+                ${recording ? "bg-red-500" : "bg-blue-500"} text-white shadow-lg transition-all`}
             >
-              {recording ? "Stop Recording" : "Start Recording"}
+              {recording ? (
+                <div className="w-8 h-8 bg-white"></div> // Stop icon (white square)
+              ) : (
+                <div className="w-0 h-0 border-l-[24px] border-l-white border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent"></div> // Play icon (triangle)
+              )}
             </Button>
-
             {/* Audio playback and waveform */}
             {audioURL && (
               <>
