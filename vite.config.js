@@ -21,11 +21,11 @@ export default defineConfig({
       //   changeOrigin: true, // Set this to true if you need to change the origin
       //   rewrite: (path) => path.replace(/^\/api/, ""), // Remove the base path from the request URL
       // },
-      "/sandbox-api": {
-        target: "https://carevoicefrontendexpress-1b06bd543d5f.herokuapp.com", // The target server
-        changeOrigin: true, // Set this to true if you need to change the origin
-        rewrite: (path) => path.replace(/^\/sandbox-api/, ""), // Remove the base path from the request URL
-      },
+      // "/sandbox-api": {
+      //   target: "https://carevoicefrontendexpress-1b06bd543d5f.herokuapp.com", // The target server
+      //   changeOrigin: true, // Set this to true if you need to change the origin
+      //   rewrite: (path) => path.replace(/^\/sandbox-api/, ""), // Remove the base path from the request URL
+      // },
     },
   },
 });

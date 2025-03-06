@@ -34,17 +34,17 @@ export default function BatchGenerationForm({ isOpen, onClose, transcripts, pati
   };
   const handleSubmit = async () => {
     setIsLoading(true);
-    let endpoint = "/sandbox-api/convert-transcripts"; // Default endpoint
+    let endpoint = "https://carevoicefrontendexpress-1b06bd543d5f.herokuapp.com/convert-transcripts"; // Default endpoint
 
     switch (documentType) {
       case "summary":
-        endpoint = "/sandbox-api/convert-to-summary";
+        endpoint = "https://carevoicefrontendexpress-1b06bd543d5f.herokuapp.com/convert-to-summary";
         break;
       case "head-to-toe":
-        endpoint = "/sandbox-api/convert-to-head-to-toe";
+        endpoint = "https://carevoicefrontendexpress-1b06bd543d5f.herokuapp.com/convert-to-head-to-toe";
         break;
       case "darp":
-        endpoint = "/sandbox-api/convert-to-darp";
+        endpoint = "https://carevoicefrontendexpress-1b06bd543d5f.herokuapp.com/convert-to-darp";
         break;
       default:
         console.error("Invalid document type:", documentType);
