@@ -1,9 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-    darkMode: ["class"],
-    content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+    mode: "jit", // ✅ Enable Just-In-Time mode for faster builds
 
-    // ✅ Add safelist here to prevent purge issues in production
+    purge: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"], // ✅ Specify files for purging unused styles
+
+    darkMode: ["class"],
+
     safelist: [
         "record-Button",
         "recording",

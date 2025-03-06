@@ -243,8 +243,11 @@ function Record() {
           <div>
             <Button
               onClick={recording ? stopRecording : startRecording}
-              className={`h-[300px] w-[300px] record-Button ${recording ? "recording" : ""}`}
-            ></Button>
+              className="h-[300px] w-[300px] bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all duration-300 !important"
+            >
+              {recording ? "Stop Recording" : "Start Recording"}
+            </Button>
+
             {/* Audio playback and waveform */}
             {audioURL && (
               <>
