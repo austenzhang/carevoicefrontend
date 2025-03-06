@@ -26,7 +26,7 @@ export default function AddPatientDialog({ onAdd, onCancel }) {
     console.log(patientData);
     setLoading(true);
     try {
-      const response = await fetch("/api/patient", {
+      const response = await fetch("https://carevoicebackend-51a59399bb40.herokuapp.com/api/patient", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -43,8 +43,8 @@ export default function AddPatientDialog({ onAdd, onCancel }) {
     } catch (error) {
       console.error("Error adding patient:", error);
     } finally {
-      setLoading(false);
-      window.location.reload();
+      // setLoading(false);
+      // window.location.reload();
 
     }
   };
