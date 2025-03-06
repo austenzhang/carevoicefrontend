@@ -12,14 +12,14 @@ export default function FormSelectionDialog({ onClose, transcriptId, patientId }
 
   const handleFillOut = async () => {
     setIsLoading(true);
-    let endpoint = "/sandbox-api/convert-transcripts";
+    let endpoint = "https://carevoicefrontendexpress-1b06bd543d5f.herokuapp.com/convert-transcripts";
     
     switch (selectedForm) {
       case "head-to-toe":
-        endpoint = "/sandbox-api/convert-to-head-to-toe";
+        endpoint = "https://carevoicefrontendexpress-1b06bd543d5f.herokuapp.com/convert-to-head-to-toe";
         break;
       case "darp":
-        endpoint = "/sandbox-api/convert-to-darp";
+        endpoint = "https://carevoicefrontendexpress-1b06bd543d5f.herokuapp.com/convert-to-darp";
         break;
       default:
         console.error("Invalid document type:", selectedForm);
