@@ -1,6 +1,6 @@
 # Carevoice Front End - A University of Calgary Nursing-Engineering Hackathon Project
 
-This is the Front end repository for Carevoice.
+This is the front end repository for Carevoice.
 
 On March 1, 2025, a joint Hackathon was conducted between the Nursing and Software Engineering M.Eng students.
 
